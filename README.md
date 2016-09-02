@@ -9,7 +9,9 @@
 
 ***访问后台***
 用以下账号密码登陆
-admin@admin@admin.com
+
+admin@admin.com
+
 admin123
 
 右上角菜单可以进入后台管理界面
