@@ -78,10 +78,8 @@ class HomeController extends Controller
         $user = Auth::user();
         $fav_count = $user->favoriteCount();
         $comments_count = $user->comments()->count();
-        $threads_count = Thread::where('author_id',$user->id)->count();
-        $posts_count = ForumPost::where('author_id',Auth::user()->id)->where('is_thread_first','!=',1)->count();
         $notificatios_count = $user->getNotifications()->count();
-        return view('front.ucenter',compact('fav_count','comments_count','threads_count','posts_count','notificatios_count'));
+        return view('front.ucenter',compact('fav_count','comments_count','notificatios_count'));
     }
 
     public function listUCenterNotifications(Request $request){
@@ -130,22 +128,7 @@ class HomeController extends Controller
         return view('front.ucenter_threads',compact('threads'));
     }
 
-    public function listUCenterForumPosts(){
-        $forum_posts = ForumPost::where('author_id',Auth::user()->id)->where('is_thread_first','!=',1)->paginate(15);
 
-        $forum_posts->map(function($p){
-            $p->thread_title = $p->thread->title;
-            $p->thread_url = Forum::route('thread.show', $p->thread);
-            $p->posted_time =$p->created_at->diffForHumans();
-            $p->content = str_limit($p->content,120);
-        });
-
-        return view('front.ucenter_forum_posts',compact('forum_posts'));
-    }
-
-    public function showProfile(){
-        return view('front.ucenter_profile');
-    }
 
     public function updateProfile(Request $request){
 
