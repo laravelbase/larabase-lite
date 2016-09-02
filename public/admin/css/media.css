@@ -1,0 +1,42 @@
+.media{
+    margin: 0;
+}
+.media .folders{
+    padding-left: 20px;
+}
+
+.media .folders li{
+   display: block;
+   margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.media .left-col{
+    background-color: #00a8c6;
+    height: auto;
+    width: 10%;
+    display: inline-block;
+}
+
+.media .right-col{
+    background-color: #75c6b1;
+    height: 100%;
+    width: 80%;
+    display: inline-block;
+}
+
+
+/* Folder */
+a.folder {
+    height: 18px;
+    top: 6px;
+    width: 27px;
+}
+
+a.icon {
+    background-color: #fed;
+    border: 2px solid #fc6;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}

@@ -1,0 +1,18 @@
+.table tbody tr td {
+
+    padding: 10px;
+
+}
+
+.table-bordered th {
+    background-color: rgb(236, 240, 242);
+    border: 0 !important;
+    font-weight: bold;
+}
+
+.table thead tr th {
+
+    font-size: 15px;
+    font-family: '微软雅黑';
+
+}

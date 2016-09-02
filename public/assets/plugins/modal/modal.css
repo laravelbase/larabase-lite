@@ -1,0 +1,92 @@
+.modal {
+    height: 400px;
+    width: 650px;
+    margin: auto;
+    box-shadow: 10px 15px 35px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 45%;
+    bottom: 55%;
+    left: 0;
+    right: 0;
+    transition: .4s, box-shadow .3s .4s;
+    z-index:999;
+}
+.modal.hidden {
+    box-shadow: none;
+    transition: .4s, box-shadow 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal.hidden .form {
+    top: 100%;
+}
+.modal.hidden .invite {
+    top: -100%;
+}
+.modal.hidden .invite .close {
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+}
+
+.form, .invite {
+    background: #FFF;
+    width: 43%;
+    height: 100%;
+    padding: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form form{
+    width: 90%;
+}
+
+
+.modal label {
+    font: 500 14px Roboto;
+    color: #7f7f7d;
+}
+
+.modal a{
+    color:#fff;
+    display: inherit;
+}
+
+.invite {
+    background: linear-gradient(-45deg, rgba(124, 77, 255, 0.7),#3F51B5);
+    left: 50%;
+}
+
+.invite h6{
+    color: #d9d9d9;
+    text-align: center;
+}
+.modal h3 {
+    font: 30px Roboto;
+    text-transform: uppercase;
+    color:#fff;
+
+}
+
+.text-right{
+
+text-align: right
+}
+
+.text-center{
+
+    text-align: center
+}
+
+.help-block{
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    top:65px;
+}
+.mdl-js-textfield{
+    position: relative;
+}
