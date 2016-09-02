@@ -1,4 +1,4 @@
-**A Simplified Version of larabase.com
+**A Simplified Version of larabase.com**
 
 
 *   下载全部文件到你的服务器root目录(按照Laravel要求设置)
