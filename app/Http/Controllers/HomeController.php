@@ -78,6 +78,7 @@ class HomeController extends Controller
         $user = Auth::user();
         $fav_count = $user->favoriteCount();
         $comments_count = $user->comments()->count();
+       
         $notificatios_count = $user->getNotifications()->count();
         return view('front.ucenter',compact('fav_count','comments_count','notificatios_count'));
     }
@@ -129,6 +130,9 @@ class HomeController extends Controller
     }
 
 
+    public function showProfile(){
+        return view('front.ucenter_profile');
+    }
 
     public function updateProfile(Request $request){
 
